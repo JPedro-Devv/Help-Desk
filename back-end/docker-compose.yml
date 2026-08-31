@@ -1,0 +1,17 @@
+services:
+  postgres:
+    container_name: postgres-help_desk
+    image: postgres:16-alpine3.23
+    restart: unless-stopped
+
+    ports:
+      - "5432:5432"
+
+    env_file:
+      - .env
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

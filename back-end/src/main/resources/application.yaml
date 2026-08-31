@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active:
+    - mobile
+
+  config:
+    import:
+      - "optional:file:.env[.properties]"
+      - "optional:file:back-end/.env[.properties]"
+  application:
+    name: helpdesk
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${POSTGRES_DB:postgres}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db:migrations
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+

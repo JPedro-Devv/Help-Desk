@@ -1,0 +1,49 @@
+# ==============================================================================
+# CONFIGURAÇÕES GLOBAIS DE AMBIENTE E SISTEMA
+# ==============================================================================
+
+# Arquivos de Senhas e Variáveis de Ambiente (NUNCA enviar ao Git)
+.env
+.env.*
+!.env.example
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de Log e Crash
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================================================================
+# IDEs E EDITORES DE CÓDIGO (Ignora em qualquer subpasta)
+# ==============================================================================
+
+# IntelliJ / WebStorm / PhpStorm / Android Studio
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+
+# VS Code
+**/.vscode/
+**/.history/
+**/*.code-workspace
+
+# Eclipse / STS
+**/.metadata/
+**/.classpath
+**/.project
+**/.settings/
+
+# ==============================================================================
+# PASTAS GERAIS DE BUILD E DEPENDÊNCIAS (Garantia extra para subpastas)
+# ==============================================================================
+**/node_modules/
+**/target/
+**/build/
+**/dist/
+.out/
