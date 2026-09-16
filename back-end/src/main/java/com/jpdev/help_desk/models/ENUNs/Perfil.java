@@ -1,4 +1,4 @@
-package com.jpdev.help_desk.models;
+package com.jpdev.help_desk.models.ENUNs;
 
 public enum Perfil {
     ROLE_CLIENTE,

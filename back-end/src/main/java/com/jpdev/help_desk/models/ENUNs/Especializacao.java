@@ -1,0 +1,10 @@
+package com.jpdev.help_desk.models.ENUNs;
+
+public enum Especializacao {
+    ACESSOS_E_PERMISSOES,
+    HARDWARE_E_PERIFERICOS,
+    REDES_E_CONECTIVIDADES,
+    SISTEMAS_E_APLICACOES,
+    BANCO_DE_DADOS_E_RELATORIOS,
+    SEGURANCA_E_INCIDENTES
+}
