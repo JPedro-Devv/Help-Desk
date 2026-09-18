@@ -15,9 +15,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Entity 
+@Entity
 @Table(name = "tb_clientes")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cliente {
 
     @Id 
@@ -35,43 +43,9 @@ public class Cliente {
     @JoinColumn(name = "usuario_id", referencedColumnName = "id", unique = true)
     private Usuario usuario;
 
-    public Cliente() {}
-
     public Cliente(String cpf, Setor setor, Usuario usuario) {
         this.cpf = cpf;
         this.setor = setor;
-        this.usuario = usuario;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public Setor getSetor() {
-        return setor;
-    }
-
-    public void setSetor(Setor setor) {
-        this.setor = setor;
-    }
-   
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
 }

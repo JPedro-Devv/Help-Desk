@@ -15,9 +15,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity 
 @Table(name = "tb_tecnicos")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Tecnico {
 
     @Id 
@@ -32,34 +40,9 @@ public class Tecnico {
     @JoinColumn(name = "usuario_id", referencedColumnName = "id", unique = true)
     private Usuario usuario;
 
-    public Tecnico() {}
-
     public Tecnico(Especializacao especializacao, Usuario usuario) {
         this.especializacao = especializacao;
         this.usuario = usuario;
     }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public Especializacao getEspecializacao() {
-        return especializacao;
-    }
-
-    public void setEspecializacao(Especializacao especializacao) {
-        this.especializacao = especializacao;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 }
